@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name controller_MK2-rescue)(type Legacy)(uri ${KIPRJMOD}/controller_MK2-rescue.lib)(options "")(descr ""))
+  (lib (name controller_MK3-rescue)(type Legacy)(uri ${KIPRJMOD}/controller_MK3-rescue.lib)(options "")(descr ""))
+  (lib (name controller_MK4-rescue)(type Legacy)(uri ${KIPRJMOD}/controller_MK4-rescue.lib)(options "")(descr ""))
+  (lib (name controller_MK5-rescue)(type Legacy)(uri ${KIPRJMOD}/controller_MK5-rescue.lib)(options "")(descr ""))
+)

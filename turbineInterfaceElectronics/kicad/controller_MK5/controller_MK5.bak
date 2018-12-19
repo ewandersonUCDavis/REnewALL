@@ -1,0 +1,1760 @@
+EESchema Schematic File Version 4
+LIBS:controller_MK4-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "turbine controller mk1"
+Date "2018-04-24"
+Rev "0.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 1350 7050 0    50   ~ 0
+ISO_REG: NCS3S1203SC\nOUTPUT RELAY: G6B-2214P-US\nOUTPUT RELAY: G6B-2114P-US\nINPUT ISO: EL3H7\nHEX INV(w/ schmitt): 74LV14PW,118\nTVS: SMAJ30ALFCT-ND\nconnector:\n2-pin: 1935161\n4-pin: 1935187\n6-pin: 1935200
+$Comp
+L controller_MK4-rescue:XBEE_900HP-KLibrary-controller_MK2-rescue-controller_MK3-rescue U1
+U 1 1 5AE26EFE
+P 3300 3450
+F 0 "U1" H 3300 4165 50  0000 C CNN
+F 1 "1528-1392-ND " H 3300 4074 50  0000 C CNN
+F 2 "Klibrary:XBEE900HP" H 3300 3650 50  0001 C CNN
+F 3 "" H 3300 3650 50  0001 C CNN
+	1    3300 3450
+	1    0    0    -1  
+$EndComp
+Text Label 1050 3000 2    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	1050 3000 1200 3000
+Text Label 2200 3300 2    50   ~ 0
+OUT_STOP
+Wire Wire Line
+	2450 3300 2200 3300
+Text Label 2200 3400 2    50   ~ 0
+~XBEE_RST
+Wire Wire Line
+	2200 3400 2450 3400
+Text Label 2200 3500 2    50   ~ 0
+IN_FAULT1
+Text Label 2200 3600 2    50   ~ 0
+OUT_START
+$Comp
+L power:GND #PWR0103
+U 1 1 5AE27601
+P 2350 4050
+F 0 "#PWR0103" H 2350 3800 50  0001 C CNN
+F 1 "GND" H 2355 3877 50  0000 C CNN
+F 2 "" H 2350 4050 50  0001 C CNN
+F 3 "" H 2350 4050 50  0001 C CNN
+	1    2350 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 4050 2350 3900
+Wire Wire Line
+	2350 3900 2450 3900
+Text Label 4450 3900 0    50   ~ 0
+IN_BRAKE
+Wire Wire Line
+	4450 3900 4150 3900
+Text Label 4450 3500 0    50   ~ 0
+XBEE_ASSO
+Wire Wire Line
+	4150 3500 4450 3500
+Text Label 4450 3400 0    50   ~ 0
+IN_FAULT2
+Text Label 4450 3300 0    50   ~ 0
+IN_FAULT3
+Text Label 4450 3200 0    50   ~ 0
+IN_FAULT4
+Text Label 4450 3100 0    50   ~ 0
+IN_PULSE
+Wire Wire Line
+	4150 3100 4450 3100
+Wire Wire Line
+	4150 3200 4450 3200
+Wire Wire Line
+	4150 3300 4450 3300
+Wire Wire Line
+	4150 3400 4450 3400
+$Comp
+L Device:C_Small C2
+U 1 1 5AE28163
+P 1500 3150
+F 0 "C2" H 1592 3196 50  0000 L CNN
+F 1 "1uF" H 1592 3105 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 1500 3150 50  0001 C CNN
+F 3 "~" H 1500 3150 50  0001 C CNN
+	1    1500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5AE281ED
+P 1750 3150
+F 0 "C3" H 1842 3196 50  0000 L CNN
+F 1 "47pF" H 1842 3105 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 1750 3150 50  0001 C CNN
+F 3 "~" H 1750 3150 50  0001 C CNN
+	1    1750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5AE282B0
+P 1050 3300
+F 0 "#PWR0104" H 1050 3050 50  0001 C CNN
+F 1 "GND" H 1055 3127 50  0000 C CNN
+F 2 "" H 1050 3300 50  0001 C CNN
+F 3 "" H 1050 3300 50  0001 C CNN
+	1    1050 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3300 1050 3250
+Wire Wire Line
+	1200 3050 1200 3000
+Connection ~ 1200 3000
+Wire Wire Line
+	1200 3000 1500 3000
+Wire Wire Line
+	1500 3050 1500 3000
+Connection ~ 1500 3000
+Wire Wire Line
+	1500 3000 1750 3000
+Wire Wire Line
+	1750 3050 1750 3000
+Wire Wire Line
+	1050 3250 1200 3250
+Connection ~ 1750 3000
+Wire Wire Line
+	1750 3000 2450 3000
+Wire Wire Line
+	1750 3250 1500 3250
+Connection ~ 1500 3250
+$Comp
+L Device:C_Small C1
+U 1 1 5AE29297
+P 1200 3150
+F 0 "C1" H 1292 3196 50  0000 L CNN
+F 1 "10uF" H 1292 3105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 1200 3150 50  0001 C CNN
+F 3 "~" H 1200 3150 50  0001 C CNN
+	1    1200 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1200 3250
+Wire Wire Line
+	1200 3250 1500 3250
+Wire Wire Line
+	2200 3500 2450 3500
+Wire Wire Line
+	2450 3600 2200 3600
+Text Label 1150 5600 2    50   ~ 0
+XBEE_ASSO
+Wire Wire Line
+	1150 5600 1300 5600
+$Comp
+L power:GND #PWR0105
+U 1 1 5AE2AF29
+P 1600 5850
+F 0 "#PWR0105" H 1600 5600 50  0001 C CNN
+F 1 "GND" H 1605 5677 50  0000 C CNN
+F 2 "" H 1600 5850 50  0001 C CNN
+F 3 "" H 1600 5850 50  0001 C CNN
+	1    1600 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 5850 1600 5750
+$Comp
+L Device:LED D3
+U 1 1 5AE2B4FD
+P 1600 5100
+F 0 "D3" V 1638 4982 50  0000 R CNN
+F 1 "GREEN" V 1547 4982 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric_Pad0.82x1.00mm_HandSolder" H 1600 5100 50  0001 C CNN
+F 3 "~" H 1600 5100 50  0001 C CNN
+	1    1600 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 5AE2B630
+P 1600 4750
+F 0 "R1" H 1659 4796 50  0000 L CNN
+F 1 "1K" H 1659 4705 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 1600 4750 50  0001 C CNN
+F 3 "~" H 1600 4750 50  0001 C CNN
+	1    1600 4750
+	1    0    0    -1  
+$EndComp
+Text Label 1600 4600 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	1600 4600 1600 4650
+Wire Wire Line
+	1600 4850 1600 4950
+Wire Wire Line
+	1600 5250 1600 5350
+Text Notes 1450 5350 1    50   ~ 0
+Around 1.6mA
+$Comp
+L Device:R_Small R9
+U 1 1 5AE3AE4A
+P 6450 850
+F 0 "R9" V 6254 850 50  0000 C CNN
+F 1 "0R" V 6345 850 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 6450 850 50  0001 C CNN
+F 3 "~" H 6450 850 50  0001 C CNN
+	1    6450 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 2200 6950 2350
+Connection ~ 6950 2350
+Text Label 6000 2050 2    50   ~ 0
+OUT_START
+$Comp
+L Device:R_Small R20
+U 1 1 5AE45482
+P 9250 800
+F 0 "R20" V 9054 800 50  0000 C CNN
+F 1 "0R" V 9145 800 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 9250 800 50  0001 C CNN
+F 3 "~" H 9250 800 50  0001 C CNN
+	1    9250 800 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 800  9450 800 
+Wire Wire Line
+	9050 800  9150 800 
+Text Notes 7200 2500 0    50   ~ 0
+two output parts are in different voltage levels
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5AE4DA01
+P 750 1000
+F 0 "J1" H 670 675 50  0000 C CNN
+F 1 "1935161" H 670 766 50  0000 C CNN
+F 2 "Klibrary:Phoenix_PT_2POS_5mm" H 750 1000 50  0001 C CNN
+F 3 "~" H 750 1000 50  0001 C CNN
+	1    750  1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Fuse_Small F1
+U 1 1 5AE4E711
+P 1150 1000
+F 0 "F1" H 1150 1050 50  0000 C CNN
+F 1 "01550900M" H 1150 900 50  0000 C CNN
+F 2 "Klibrary:littlefuse-omni-blok" H 1150 1000 50  0001 C CNN
+F 3 "~" H 1150 1000 50  0001 C CNN
+	1    1150 1000
+	1    0    0    -1  
+$EndComp
+Text Label 1450 1000 0    50   ~ 0
+EXT_24V
+Wire Wire Line
+	1050 900  950  900 
+Wire Wire Line
+	1000 1550 1000 1450
+$Comp
+L Isolator:TLP291 U4
+U 1 1 5AE5BAAB
+P 6400 3400
+F 0 "U4" H 6300 3200 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 6500 3200 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 6200 3200 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 6400 3400 50  0001 L CNN
+	1    6400 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 6150 3700 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 5700 3300 2    50   ~ 0
+EXT_FAULT1
+$Comp
+L Device:R_Small R2
+U 1 1 5AE5C1AD
+P 5850 3300
+F 0 "R2" V 5654 3300 50  0000 C CNN
+F 1 "1K" V 5745 3300 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 5850 3300 50  0001 C CNN
+F 3 "~" H 5850 3300 50  0001 C CNN
+	1    5850 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5AE5C336
+P 5950 3450
+F 0 "R5" H 5891 3404 50  0000 R CNN
+F 1 "1M" H 5891 3495 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 5950 3450 50  0001 C CNN
+F 3 "~" H 5950 3450 50  0001 C CNN
+	1    5950 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 3300 5750 3300
+Wire Wire Line
+	5950 3300 6100 3300
+Wire Wire Line
+	5950 3300 5950 3350
+Connection ~ 5950 3300
+$Comp
+L Device:C_Small C6
+U 1 1 5AE65A52
+P 5700 3450
+F 0 "C6" H 5792 3496 50  0000 L CNN
+F 1 "1uF" H 5792 3405 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 5700 3450 50  0001 C CNN
+F 3 "~" H 5700 3450 50  0001 C CNN
+	1    5700 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 3300 5700 3350
+Wire Wire Line
+	5700 3550 5700 3700
+Wire Wire Line
+	5700 3700 5950 3700
+Connection ~ 5700 3700
+Wire Wire Line
+	5950 3550 5950 3700
+Wire Wire Line
+	6100 3700 5950 3700
+Wire Wire Line
+	6100 3500 6100 3700
+Connection ~ 5950 3700
+$Comp
+L 74xx:74LV14 U3
+U 1 1 5AE6D1B0
+P 7200 3300
+F 0 "U3" H 7200 3617 50  0000 C CNN
+F 1 "SN74LV14APWR" H 7200 3526 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7200 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 7200 3300 50  0001 C CNN
+	1    7200 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5AE7011D
+P 6750 3600
+F 0 "#PWR0108" H 6750 3350 50  0001 C CNN
+F 1 "GND" H 6755 3427 50  0000 C CNN
+F 2 "" H 6750 3600 50  0001 C CNN
+F 3 "" H 6750 3600 50  0001 C CNN
+	1    6750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 3600 6750 3500
+Wire Wire Line
+	6750 3500 6700 3500
+$Comp
+L Device:R_Small R10
+U 1 1 5AE722AA
+P 6700 3150
+F 0 "R10" H 6759 3196 50  0000 L CNN
+F 1 "1K" H 6759 3105 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 6700 3150 50  0001 C CNN
+F 3 "~" H 6700 3150 50  0001 C CNN
+	1    6700 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3250 6700 3300
+Text Label 6700 3000 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	6700 3000 6700 3050
+Wire Wire Line
+	6700 3300 6900 3300
+Text Label 7550 3300 0    50   ~ 0
+IN_FAULT1
+Wire Wire Line
+	7500 3300 7550 3300
+$Comp
+L Isolator:TLP291 U5
+U 1 1 5AE80636
+P 6400 4350
+F 0 "U5" H 6400 4675 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 6400 4584 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 6200 4150 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 6400 4350 50  0001 L CNN
+	1    6400 4350
+	1    0    0    -1  
+$EndComp
+Text Notes 6150 4600 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 5700 4250 2    50   ~ 0
+EXT_FAULT2
+$Comp
+L Device:R_Small R3
+U 1 1 5AE8063E
+P 5850 4250
+F 0 "R3" V 5654 4250 50  0000 C CNN
+F 1 "1K" V 5745 4250 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 5850 4250 50  0001 C CNN
+F 3 "~" H 5850 4250 50  0001 C CNN
+	1    5850 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5AE80644
+P 5950 4400
+F 0 "R6" H 5891 4354 50  0000 R CNN
+F 1 "1M" H 5891 4445 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 5950 4400 50  0001 C CNN
+F 3 "~" H 5950 4400 50  0001 C CNN
+	1    5950 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 4250 5750 4250
+Wire Wire Line
+	5950 4250 6100 4250
+Wire Wire Line
+	5950 4250 5950 4300
+Connection ~ 5950 4250
+$Comp
+L Device:C_Small C7
+U 1 1 5AE8064F
+P 5700 4400
+F 0 "C7" H 5792 4446 50  0000 L CNN
+F 1 "1uF" H 5792 4355 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 5700 4400 50  0001 C CNN
+F 3 "~" H 5700 4400 50  0001 C CNN
+	1    5700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 4250 5700 4300
+Wire Wire Line
+	5700 4500 5700 4650
+Wire Wire Line
+	5700 4650 5950 4650
+Connection ~ 5700 4650
+Wire Wire Line
+	5950 4500 5950 4650
+Wire Wire Line
+	6100 4650 5950 4650
+Wire Wire Line
+	6100 4450 6100 4650
+Connection ~ 5950 4650
+$Comp
+L power:GND #PWR0109
+U 1 1 5AE80664
+P 6750 4550
+F 0 "#PWR0109" H 6750 4300 50  0001 C CNN
+F 1 "GND" H 6755 4377 50  0000 C CNN
+F 2 "" H 6750 4550 50  0001 C CNN
+F 3 "" H 6750 4550 50  0001 C CNN
+	1    6750 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 4550 6750 4450
+Wire Wire Line
+	6750 4450 6700 4450
+$Comp
+L Device:R_Small R11
+U 1 1 5AE8066C
+P 6700 4100
+F 0 "R11" H 6759 4146 50  0000 L CNN
+F 1 "1K" H 6759 4055 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 6700 4100 50  0001 C CNN
+F 3 "~" H 6700 4100 50  0001 C CNN
+	1    6700 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4200 6700 4250
+Text Label 6700 3950 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	6700 3950 6700 4000
+Wire Wire Line
+	6700 4250 6900 4250
+Connection ~ 6700 4250
+Text Label 7550 4250 0    50   ~ 0
+IN_FAULT2
+Wire Wire Line
+	7500 4250 7550 4250
+$Comp
+L Isolator:TLP291 U6
+U 1 1 5AE83325
+P 6400 5300
+F 0 "U6" H 6400 5625 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 6400 5534 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 6200 5100 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 6400 5300 50  0001 L CNN
+	1    6400 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 6150 5550 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 5700 5200 2    50   ~ 0
+EXT_FAULT3
+$Comp
+L Device:R_Small R4
+U 1 1 5AE8332D
+P 5850 5200
+F 0 "R4" V 5654 5200 50  0000 C CNN
+F 1 "1K" V 5745 5200 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 5850 5200 50  0001 C CNN
+F 3 "~" H 5850 5200 50  0001 C CNN
+	1    5850 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R7
+U 1 1 5AE83333
+P 5950 5350
+F 0 "R7" H 5891 5304 50  0000 R CNN
+F 1 "1M" H 5891 5395 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 5950 5350 50  0001 C CNN
+F 3 "~" H 5950 5350 50  0001 C CNN
+	1    5950 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 5200 5750 5200
+Wire Wire Line
+	5950 5200 6100 5200
+Wire Wire Line
+	5950 5200 5950 5250
+Connection ~ 5950 5200
+$Comp
+L Device:C_Small C8
+U 1 1 5AE8333E
+P 5700 5350
+F 0 "C8" H 5792 5396 50  0000 L CNN
+F 1 "1uF" H 5792 5305 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 5700 5350 50  0001 C CNN
+F 3 "~" H 5700 5350 50  0001 C CNN
+	1    5700 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5200 5700 5250
+Wire Wire Line
+	5700 5450 5700 5600
+Wire Wire Line
+	5700 5600 5950 5600
+Connection ~ 5700 5600
+Wire Wire Line
+	5950 5450 5950 5600
+Wire Wire Line
+	6100 5600 5950 5600
+Wire Wire Line
+	6100 5400 6100 5600
+Connection ~ 5950 5600
+$Comp
+L power:GND #PWR0110
+U 1 1 5AE83353
+P 6750 5500
+F 0 "#PWR0110" H 6750 5250 50  0001 C CNN
+F 1 "GND" H 6755 5327 50  0000 C CNN
+F 2 "" H 6750 5500 50  0001 C CNN
+F 3 "" H 6750 5500 50  0001 C CNN
+	1    6750 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6750 5500 6750 5400
+Wire Wire Line
+	6750 5400 6700 5400
+$Comp
+L Device:R_Small R12
+U 1 1 5AE8335B
+P 6700 5050
+F 0 "R12" H 6759 5096 50  0000 L CNN
+F 1 "1K" H 6759 5005 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 6700 5050 50  0001 C CNN
+F 3 "~" H 6700 5050 50  0001 C CNN
+	1    6700 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 5150 6700 5200
+Text Label 6700 4900 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	6700 4900 6700 4950
+Wire Wire Line
+	6700 5200 6900 5200
+Connection ~ 6700 5200
+Text Label 7550 5200 0    50   ~ 0
+IN_FAULT3
+Wire Wire Line
+	7500 5200 7550 5200
+$Comp
+L Isolator:TLP291 U8
+U 1 1 5AE87257
+P 9200 3400
+F 0 "U8" H 9200 3725 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 9200 3634 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 9000 3200 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 9200 3400 50  0001 L CNN
+	1    9200 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 8950 3650 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 8500 3300 2    50   ~ 0
+EXT_FAULT4
+$Comp
+L Device:R_Small R13
+U 1 1 5AE8725F
+P 8650 3300
+F 0 "R13" V 8454 3300 50  0000 C CNN
+F 1 "1K" V 8545 3300 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 8650 3300 50  0001 C CNN
+F 3 "~" H 8650 3300 50  0001 C CNN
+	1    8650 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R16
+U 1 1 5AE87265
+P 8750 3450
+F 0 "R16" H 8691 3404 50  0000 R CNN
+F 1 "1M" H 8691 3495 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 8750 3450 50  0001 C CNN
+F 3 "~" H 8750 3450 50  0001 C CNN
+	1    8750 3450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 3300 8550 3300
+Wire Wire Line
+	8750 3300 8900 3300
+Wire Wire Line
+	8750 3300 8750 3350
+Connection ~ 8750 3300
+$Comp
+L Device:C_Small C11
+U 1 1 5AE87270
+P 8500 3450
+F 0 "C11" H 8592 3496 50  0000 L CNN
+F 1 "1uF" H 8592 3405 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 8500 3450 50  0001 C CNN
+F 3 "~" H 8500 3450 50  0001 C CNN
+	1    8500 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 3300 8500 3350
+Wire Wire Line
+	8500 3550 8500 3700
+Wire Wire Line
+	8500 3700 8750 3700
+Connection ~ 8500 3700
+Wire Wire Line
+	8750 3550 8750 3700
+Wire Wire Line
+	8900 3700 8750 3700
+Wire Wire Line
+	8900 3500 8900 3700
+Connection ~ 8750 3700
+$Comp
+L power:GND #PWR0111
+U 1 1 5AE87285
+P 9550 3600
+F 0 "#PWR0111" H 9550 3350 50  0001 C CNN
+F 1 "GND" H 9555 3427 50  0000 C CNN
+F 2 "" H 9550 3600 50  0001 C CNN
+F 3 "" H 9550 3600 50  0001 C CNN
+	1    9550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 3600 9550 3500
+Wire Wire Line
+	9550 3500 9500 3500
+$Comp
+L Device:R_Small R21
+U 1 1 5AE8728D
+P 9500 3150
+F 0 "R21" H 9559 3196 50  0000 L CNN
+F 1 "1K" H 9559 3105 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 9500 3150 50  0001 C CNN
+F 3 "~" H 9500 3150 50  0001 C CNN
+	1    9500 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3250 9500 3300
+Text Label 9500 3000 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	9500 3000 9500 3050
+Wire Wire Line
+	9500 3300 9700 3300
+Connection ~ 9500 3300
+Text Label 10350 3300 0    50   ~ 0
+IN_FAULT4
+Wire Wire Line
+	10300 3300 10350 3300
+$Comp
+L Isolator:TLP291 U9
+U 1 1 5AE8729A
+P 9200 4350
+F 0 "U9" H 9200 4675 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 9200 4584 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 9000 4150 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 9200 4350 50  0001 L CNN
+	1    9200 4350
+	1    0    0    -1  
+$EndComp
+Text Notes 8950 4600 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 8500 4250 2    50   ~ 0
+EXT_PULSE
+$Comp
+L Device:R_Small R14
+U 1 1 5AE872A2
+P 8650 4250
+F 0 "R14" V 8454 4250 50  0000 C CNN
+F 1 "1K" V 8545 4250 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 8650 4250 50  0001 C CNN
+F 3 "~" H 8650 4250 50  0001 C CNN
+	1    8650 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R17
+U 1 1 5AE872A8
+P 8750 4400
+F 0 "R17" H 8691 4354 50  0000 R CNN
+F 1 "1M" H 8691 4445 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 8750 4400 50  0001 C CNN
+F 3 "~" H 8750 4400 50  0001 C CNN
+	1    8750 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 4250 8550 4250
+Wire Wire Line
+	8750 4250 8900 4250
+Wire Wire Line
+	8750 4250 8750 4300
+Connection ~ 8750 4250
+$Comp
+L Device:C_Small C12
+U 1 1 5AE872B3
+P 8500 4400
+F 0 "C12" H 8592 4446 50  0000 L CNN
+F 1 "1uF" H 8592 4355 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 8500 4400 50  0001 C CNN
+F 3 "~" H 8500 4400 50  0001 C CNN
+	1    8500 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4250 8500 4300
+Wire Wire Line
+	8500 4500 8500 4650
+Wire Wire Line
+	8500 4650 8750 4650
+Connection ~ 8500 4650
+Wire Wire Line
+	8750 4500 8750 4650
+Wire Wire Line
+	8900 4650 8750 4650
+Wire Wire Line
+	8900 4450 8900 4650
+Connection ~ 8750 4650
+$Comp
+L power:GND #PWR0112
+U 1 1 5AE872C8
+P 9550 4550
+F 0 "#PWR0112" H 9550 4300 50  0001 C CNN
+F 1 "GND" H 9555 4377 50  0000 C CNN
+F 2 "" H 9550 4550 50  0001 C CNN
+F 3 "" H 9550 4550 50  0001 C CNN
+	1    9550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 4550 9550 4450
+Wire Wire Line
+	9550 4450 9500 4450
+$Comp
+L Device:R_Small R22
+U 1 1 5AE872D0
+P 9500 4100
+F 0 "R22" H 9559 4146 50  0000 L CNN
+F 1 "1K" H 9559 4055 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 9500 4100 50  0001 C CNN
+F 3 "~" H 9500 4100 50  0001 C CNN
+	1    9500 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 4200 9500 4250
+Text Label 9500 3950 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	9500 3950 9500 4000
+Wire Wire Line
+	9500 4250 9700 4250
+Connection ~ 9500 4250
+Text Label 10350 4250 0    50   ~ 0
+IN_PULSE
+$Comp
+L Isolator:TLP291 U10
+U 1 1 5AE872DD
+P 9200 5300
+F 0 "U10" H 9200 5625 50  0000 C CNN
+F 1 "EL3H7(TA)-VG" H 9200 5534 50  0000 C CNN
+F 2 "Klibrary:EL3H7-G" H 9000 5100 50  0001 L CIN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12884&prodName=TLP291" H 9200 5300 50  0001 L CNN
+	1    9200 5300
+	1    0    0    -1  
+$EndComp
+Text Notes 8950 5550 0    50   ~ 0
+20mA, 1.2V Vf
+Text Label 8500 5200 2    50   ~ 0
+EXT_BRAKE
+$Comp
+L Device:R_Small R15
+U 1 1 5AE872E5
+P 8650 5200
+F 0 "R15" V 8454 5200 50  0000 C CNN
+F 1 "1K" V 8545 5200 50  0000 C CNN
+F 2 "Klibrary:R_0603" H 8650 5200 50  0001 C CNN
+F 3 "~" H 8650 5200 50  0001 C CNN
+	1    8650 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5AE872EB
+P 8750 5350
+F 0 "R18" H 8691 5304 50  0000 R CNN
+F 1 "1M" H 8691 5395 50  0000 R CNN
+F 2 "Klibrary:R_0603" H 8750 5350 50  0001 C CNN
+F 3 "~" H 8750 5350 50  0001 C CNN
+	1    8750 5350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 5200 8550 5200
+Wire Wire Line
+	8750 5200 8900 5200
+Wire Wire Line
+	8750 5200 8750 5250
+Connection ~ 8750 5200
+$Comp
+L Device:C_Small C13
+U 1 1 5AE872F6
+P 8500 5350
+F 0 "C13" H 8592 5396 50  0000 L CNN
+F 1 "1uF" H 8592 5305 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 8500 5350 50  0001 C CNN
+F 3 "~" H 8500 5350 50  0001 C CNN
+	1    8500 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 5200 8500 5250
+Wire Wire Line
+	8500 5450 8500 5600
+Wire Wire Line
+	8500 5600 8750 5600
+Connection ~ 8500 5600
+Wire Wire Line
+	8750 5450 8750 5600
+Wire Wire Line
+	8900 5600 8750 5600
+Wire Wire Line
+	8900 5400 8900 5600
+Connection ~ 8750 5600
+$Comp
+L power:GND #PWR0113
+U 1 1 5AE8730B
+P 9550 5500
+F 0 "#PWR0113" H 9550 5250 50  0001 C CNN
+F 1 "GND" H 9555 5327 50  0000 C CNN
+F 2 "" H 9550 5500 50  0001 C CNN
+F 3 "" H 9550 5500 50  0001 C CNN
+	1    9550 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 5500 9550 5400
+Wire Wire Line
+	9550 5400 9500 5400
+$Comp
+L Device:R_Small R23
+U 1 1 5AE87313
+P 9500 5050
+F 0 "R23" H 9559 5096 50  0000 L CNN
+F 1 "1K" H 9559 5005 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 9500 5050 50  0001 C CNN
+F 3 "~" H 9500 5050 50  0001 C CNN
+	1    9500 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 5150 9500 5200
+Text Label 9500 4900 0    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	9500 4900 9500 4950
+Wire Wire Line
+	9500 5200 9700 5200
+Connection ~ 9500 5200
+Text Label 10350 5200 0    50   ~ 0
+IN_BRAKE
+Wire Wire Line
+	10300 5200 10350 5200
+$Comp
+L 74xx:74LV14 U3
+U 2 1 5AEBA38C
+P 7200 4250
+F 0 "U3" H 7200 4567 50  0000 C CNN
+F 1 "SN74LV14APWR" H 7200 4476 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7200 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 7200 4250 50  0001 C CNN
+	2    7200 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LV14 U3
+U 3 1 5AEBA4B1
+P 7200 5200
+F 0 "U3" H 7200 5517 50  0000 C CNN
+F 1 "SN74LV14APWR" H 7200 5426 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7200 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 7200 5200 50  0001 C CNN
+	3    7200 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LV14 U3
+U 4 1 5AEBA5D5
+P 10000 3300
+F 0 "U3" H 10000 3617 50  0000 C CNN
+F 1 "SN74LV14APWR" H 10000 3526 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10000 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 10000 3300 50  0001 C CNN
+	4    10000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LV14 U3
+U 5 1 5AEBA6C0
+P 10000 4250
+F 0 "U3" H 10000 4567 50  0000 C CNN
+F 1 "SN74LV14APWR" H 10000 4476 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10000 4250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 10000 4250 50  0001 C CNN
+	5    10000 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LV14 U3
+U 7 1 5AEBA8E3
+P 6350 6400
+F 0 "U3" H 6580 6446 50  0000 L CNN
+F 1 "SN74LV14APWR" H 6580 6355 50  0000 L CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 6350 6400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 6350 6400 50  0001 C CNN
+	7    6350 6400
+	1    0    0    -1  
+$EndComp
+Text Label 5800 5900 2    50   ~ 0
+SYS_3V3
+Wire Wire Line
+	5800 5900 5850 5900
+$Comp
+L power:GND #PWR0114
+U 1 1 5AEC59E1
+P 5850 6900
+F 0 "#PWR0114" H 5850 6650 50  0001 C CNN
+F 1 "GND" H 5855 6727 50  0000 C CNN
+F 2 "" H 5850 6900 50  0001 C CNN
+F 3 "" H 5850 6900 50  0001 C CNN
+	1    5850 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 6900 6000 6900
+$Comp
+L Device:C_Small C9
+U 1 1 5AECC629
+P 5850 6250
+F 0 "C9" H 5942 6296 50  0000 L CNN
+F 1 "0.1u" H 5942 6205 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 5850 6250 50  0001 C CNN
+F 3 "~" H 5850 6250 50  0001 C CNN
+	1    5850 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5AECC74E
+P 6000 6500
+F 0 "C10" H 6092 6546 50  0000 L CNN
+F 1 "1u" H 6092 6455 50  0000 L CNN
+F 2 "Klibrary:C_0603" H 6000 6500 50  0001 C CNN
+F 3 "~" H 6000 6500 50  0001 C CNN
+	1    6000 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 5900 5850 6150
+Connection ~ 5850 5900
+Wire Wire Line
+	5850 5900 6000 5900
+Wire Wire Line
+	5850 6350 5850 6900
+Connection ~ 5850 6900
+Wire Wire Line
+	6000 6600 6000 6900
+Connection ~ 6000 6900
+Wire Wire Line
+	6000 6900 6350 6900
+Wire Wire Line
+	6000 6400 6000 5900
+Connection ~ 6000 5900
+Wire Wire Line
+	6000 5900 6350 5900
+Wire Notes Line
+	5100 2850 5100 7250
+Wire Notes Line
+	5100 7250 6950 7250
+Wire Notes Line
+	6950 7250 6950 6250
+Wire Notes Line
+	6950 6250 10950 6250
+Wire Notes Line
+	10950 6250 10950 2850
+Wire Notes Line
+	10950 2850 5100 2850
+Text Notes 10100 5950 0    50   ~ 0
+INPUT STAGE
+Text Notes 10150 2450 0    50   ~ 0
+OUTPUT STAGE
+Wire Notes Line
+	10950 2650 10950 600 
+Wire Notes Line
+	10950 600  5100 600 
+Wire Notes Line
+	5100 600  5100 2650
+Wire Notes Line
+	5100 2650 10950 2650
+Text Notes 3050 4750 0    50   ~ 0
+MAY NEED WATCHDOG HERE
+Text Notes 2650 4850 0    50   ~ 0
+IF NEEDED, REPLACE ALL INV WITH NOT SCHMITT TRIGGER
+Text Label 6300 850  2    50   ~ 0
+EXT_24V
+Text Label 6850 800  0    50   ~ 0
+START_A1
+Wire Wire Line
+	6850 800  6850 950 
+Text Label 7000 900  0    50   ~ 0
+START_A2
+Wire Wire Line
+	7000 900  7000 950 
+Text Label 6850 1700 0    50   ~ 0
+START_B1
+Wire Wire Line
+	6850 1700 6850 1550
+Text Label 7000 1600 0    50   ~ 0
+START_B2
+Wire Wire Line
+	7000 1600 7000 1550
+Text Label 9050 800  2    50   ~ 0
+EXT_24V
+Wire Wire Line
+	9650 800  9650 950 
+Text Label 9800 1600 0    50   ~ 0
+STOP_A2
+Wire Wire Line
+	9800 900  9800 950 
+Text Label 9650 800  0    50   ~ 0
+STOP_B1
+Wire Wire Line
+	9650 1700 9650 1550
+Text Label 9800 900  0    50   ~ 0
+STOP_B2
+Wire Wire Line
+	9800 1600 9800 1550
+Wire Wire Line
+	9450 1550 9450 1650
+Text Label 9650 1700 0    50   ~ 0
+STOP_A1
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 5AFA1CD4
+P 3150 6750
+F 0 "J4" H 3070 7067 50  0000 C CNN
+F 1 "1935187" H 3070 6976 50  0000 C CNN
+F 2 "Klibrary:Phoenix_PT_4POS_5mm" H 3150 6750 50  0001 C CNN
+F 3 "~" H 3150 6750 50  0001 C CNN
+	1    3150 6750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J5
+U 1 1 5AFA2052
+P 3150 7400
+F 0 "J5" H 3070 7717 50  0000 C CNN
+F 1 "1935187" H 3070 7626 50  0000 C CNN
+F 2 "Klibrary:Phoenix_PT_4POS_5mm" H 3150 7400 50  0001 C CNN
+F 3 "~" H 3150 7400 50  0001 C CNN
+	1    3150 7400
+	-1   0    0    -1  
+$EndComp
+Text Label 3650 6200 0    50   ~ 0
+EXT_BRAKE
+Text Label 3650 5700 0    50   ~ 0
+EXT_FAULT1
+Text Label 3550 7300 0    50   ~ 0
+START_A1
+Text Label 3550 7400 0    50   ~ 0
+START_A2
+Text Label 3550 7500 0    50   ~ 0
+START_B1
+Text Label 3550 7600 0    50   ~ 0
+START_B2
+Text Label 3550 6650 0    50   ~ 0
+STOP_A1
+Text Label 3550 6750 0    50   ~ 0
+STOP_A2
+Text Label 3550 6850 0    50   ~ 0
+STOP_B1
+Text Label 3550 6950 0    50   ~ 0
+STOP_B2
+Wire Wire Line
+	3350 6650 3550 6650
+Wire Wire Line
+	3550 6750 3350 6750
+Wire Wire Line
+	3350 6850 3550 6850
+Wire Wire Line
+	3550 6950 3350 6950
+Wire Wire Line
+	3350 7300 3550 7300
+Wire Wire Line
+	3550 7400 3350 7400
+Wire Wire Line
+	3350 7500 3550 7500
+Wire Wire Line
+	3550 7600 3350 7600
+Text Label 3650 5800 0    50   ~ 0
+EXT_FAULT2
+$Comp
+L Connector_Generic:Conn_01x06 J6
+U 1 1 5B038E20
+P 3250 5900
+F 0 "J6" H 3170 6317 50  0000 C CNN
+F 1 "1935200" H 3170 6226 50  0000 C CNN
+F 2 "Klibrary:Phoenix_PT_6POS_5mm" H 3250 5900 50  0001 C CNN
+F 3 "~" H 3250 5900 50  0001 C CNN
+	1    3250 5900
+	-1   0    0    -1  
+$EndComp
+Text Label 3650 5900 0    50   ~ 0
+EXT_FAULT3
+Text Label 3650 6000 0    50   ~ 0
+EXT_FAULT4
+Text Label 3650 6100 0    50   ~ 0
+EXT_PULSE
+Wire Wire Line
+	3450 5700 3650 5700
+Wire Wire Line
+	3450 5900 3650 5900
+Wire Wire Line
+	3450 6100 3650 6100
+$Comp
+L controller_MK4-rescue:G6B-2114P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue U11
+U 1 1 5AF73C38
+P 9600 1250
+F 0 "U11" H 9878 1296 50  0000 L CNN
+F 1 "G6B-2114P-US" H 9878 1205 50  0000 L CNN
+F 2 "Klibrary:omron_relay_P6B_holder" H 9600 1250 50  0001 C CNN
+F 3 "" H 9600 1250 50  0001 C CNN
+	1    9600 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:G6B-2214P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue U7
+U 1 1 5AF984AF
+P 6800 1250
+F 0 "U7" H 7078 1296 50  0000 L CNN
+F 1 "G6B-2214P-US" H 7078 1205 50  0000 L CNN
+F 2 "Klibrary:omron_relay_P6B_holder" H 6800 1200 50  0001 C CNN
+F 3 "" H 6800 1200 50  0001 C CNN
+	1    6800 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LV14 U3
+U 6 1 5AF93471
+P 10000 5200
+F 0 "U3" H 10000 5517 50  0000 C CNN
+F 1 "SN74LV14APWR" H 10000 5426 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10000 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LV14" H 10000 5200 50  0001 C CNN
+	6    10000 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 4250 10300 4250
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D1
+U 1 1 5AFD8A78
+P 1000 1300
+F 0 "D1" V 954 1379 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 1045 1379 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 1000 1300 50  0001 C CNN
+F 3 "~" H 1000 1300 50  0001 C CNN
+	1    1000 1300
+	0    1    1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:MountingHole-M3-KLibrary J2
+U 1 1 5AFE714D
+P 2550 5700
+F 0 "J2" H 2684 5784 24  0000 C CNN
+F 1 "MountingHole-M3" H 2550 5650 24  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 2550 5700 60  0001 C CNN
+F 3 "" H 2550 5700 60  0001 C CNN
+	1    2550 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:MountingHole-M3-KLibrary J7
+U 1 1 5AFE7293
+P 2550 5800
+F 0 "J7" H 2684 5884 24  0000 C CNN
+F 1 "MountingHole-M3" H 2550 5750 24  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 2550 5800 60  0001 C CNN
+F 3 "" H 2550 5800 60  0001 C CNN
+	1    2550 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:MountingHole-M3-KLibrary J8
+U 1 1 5AFE7329
+P 2550 5900
+F 0 "J8" H 2684 5984 24  0000 C CNN
+F 1 "MountingHole-M3" H 2550 5850 24  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 2550 5900 60  0001 C CNN
+F 3 "" H 2550 5900 60  0001 C CNN
+	1    2550 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:MountingHole-M3-KLibrary J9
+U 1 1 5AFE73C1
+P 2550 6000
+F 0 "J9" H 2684 6084 24  0000 C CNN
+F 1 "MountingHole-M3" H 2550 5950 24  0001 C CNN
+F 2 "Mounting_Holes:MountingHole_4.3mm_M4" H 2550 6000 60  0001 C CNN
+F 3 "" H 2550 6000 60  0001 C CNN
+	1    2550 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:NMOS_GENERAL-KLibrary Q2
+U 1 1 5B0169FE
+P 6850 2000
+F 0 "Q2" H 7041 2046 50  0000 L CNN
+F 1 "BSS138L" H 7041 1955 50  0000 L CNN
+F 2 "Klibrary:SOT-23_NMOSGSD" H 7050 1925 50  0001 L CIN
+F 3 "" H 6850 2000 50  0001 L CNN
+	1    6850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:NMOS_GENERAL-KLibrary Q1
+U 1 1 5B01A911
+P 1500 5550
+F 0 "Q1" H 1691 5596 50  0000 L CNN
+F 1 "BSS138L" H 1691 5505 50  0000 L CNN
+F 2 "Klibrary:SOT-23_NMOSGSD" H 1700 5475 50  0001 L CIN
+F 3 "" H 1500 5550 50  0001 L CNN
+	1    1500 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  1000 1000 1000
+Wire Wire Line
+	1000 1150 1000 1000
+Connection ~ 1000 1000
+Wire Wire Line
+	1000 1000 1050 1000
+Wire Wire Line
+	6950 2350 6950 2450
+Wire Wire Line
+	6250 2350 6950 2350
+$Comp
+L Device:R_Small R24
+U 1 1 5B2D0E8E
+P 6250 2200
+F 0 "R24" H 6309 2246 50  0000 L CNN
+F 1 "4.7K" H 6309 2155 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 6250 2200 50  0001 C CNN
+F 3 "~" H 6250 2200 50  0001 C CNN
+	1    6250 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 2300 6250 2350
+Wire Wire Line
+	6650 2050 6250 2050
+Wire Wire Line
+	6250 2050 6250 2100
+Wire Wire Line
+	9450 2150 9450 2300
+Connection ~ 9450 2300
+$Comp
+L controller_MK4-rescue:NMOS_GENERAL-KLibrary Q3
+U 1 1 5B34B799
+P 9350 1950
+F 0 "Q3" H 9541 1996 50  0000 L CNN
+F 1 "BSS138L" H 9541 1905 50  0000 L CNN
+F 2 "Klibrary:SOT-23_NMOSGSD" H 9550 1875 50  0001 L CIN
+F 3 "" H 9350 1950 50  0001 L CNN
+	1    9350 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 2300 9450 2400
+Wire Wire Line
+	9000 2300 9450 2300
+$Comp
+L Device:R_Small R27
+U 1 1 5B34B7A4
+P 9000 2150
+F 0 "R27" H 9059 2196 50  0000 L CNN
+F 1 "4.7K" H 9059 2105 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 9000 2150 50  0001 C CNN
+F 3 "~" H 9000 2150 50  0001 C CNN
+	1    9000 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 2250 9000 2300
+Wire Wire Line
+	9150 2000 9000 2000
+Wire Wire Line
+	9000 2000 9000 2050
+Connection ~ 6700 3300
+Wire Wire Line
+	6550 850  6650 850 
+Wire Wire Line
+	6650 850  6650 950 
+Wire Wire Line
+	6300 850  6350 850 
+Wire Wire Line
+	6650 1550 6650 1650
+Wire Wire Line
+	6650 1800 6950 1800
+Text Label 8700 2000 2    50   ~ 0
+OUT_STOP
+Text Notes 7550 1700 1    50   ~ 0
+G6B-2214P-US DC24
+$Comp
+L Device:R_Small R29
+U 1 1 5B320E0D
+P 8850 2000
+F 0 "R29" H 8909 2046 50  0000 L CNN
+F 1 "10" H 8909 1955 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 8850 2000 50  0001 C CNN
+F 3 "~" H 8850 2000 50  0001 C CNN
+	1    8850 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8950 2000 9000 2000
+Wire Wire Line
+	8750 2000 8700 2000
+Text Notes 5450 1900 1    50   ~ 0
+3.3V/100 = 33mA
+Wire Wire Line
+	6450 950  6650 950 
+Connection ~ 6650 950 
+Wire Wire Line
+	6450 1650 6650 1650
+Connection ~ 6650 1650
+Wire Wire Line
+	6650 1650 6650 1800
+Wire Wire Line
+	9250 950  9450 950 
+Connection ~ 9450 950 
+Wire Wire Line
+	9450 950  9450 800 
+Wire Wire Line
+	9250 1650 9450 1650
+Connection ~ 9450 1650
+Wire Wire Line
+	9450 1650 9450 1750
+Wire Wire Line
+	3450 6200 3650 6200
+Wire Wire Line
+	3450 6000 3650 6000
+Wire Wire Line
+	3450 5800 3650 5800
+$Comp
+L controller_MK4-rescue:OKI-78SR-KLibrary U2
+U 1 1 5B71CB66
+P 2350 1000
+F 0 "U2" H 2350 1265 50  0000 C CNN
+F 1 "OKI-78SR-3.3/1.5-W36-C " H 2350 1174 50  0000 C CNN
+F 2 "Klibrary:OKI-78SR" H 2350 1000 50  0001 C CNN
+F 3 "" H 2350 1000 50  0001 C CNN
+	1    2350 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1000 1800 1000
+$Comp
+L power:GND #PWR0101
+U 1 1 5B72A2F5
+P 1300 800
+F 0 "#PWR0101" H 1300 550 50  0001 C CNN
+F 1 "GND" V 1305 672 50  0000 R CNN
+F 2 "" H 1300 800 50  0001 C CNN
+F 3 "" H 1300 800 50  0001 C CNN
+	1    1300 800 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1300 800  1050 800 
+Wire Wire Line
+	1050 800  1050 900 
+$Comp
+L power:GND #PWR0102
+U 1 1 5B737C94
+P 2350 1500
+F 0 "#PWR0102" H 2350 1250 50  0001 C CNN
+F 1 "GND" H 2355 1327 50  0000 C CNN
+F 2 "" H 2350 1500 50  0001 C CNN
+F 3 "" H 2350 1500 50  0001 C CNN
+	1    2350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 1500 2350 1400
+$Comp
+L Device:C_Small C5
+U 1 1 5B7450BE
+P 2850 1200
+F 0 "C5" H 2942 1246 50  0000 L CNN
+F 1 "10uF" H 2942 1155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 2850 1200 50  0001 C CNN
+F 3 "~" H 2850 1200 50  0001 C CNN
+	1    2850 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 5B745174
+P 3350 1200
+F 0 "C14" H 3442 1246 50  0000 L CNN
+F 1 "10uF" H 3442 1155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206" H 3350 1200 50  0001 C CNN
+F 3 "~" H 3350 1200 50  0001 C CNN
+	1    3350 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1000 2850 1000
+Wire Wire Line
+	3350 1000 3350 1100
+Wire Wire Line
+	2850 1100 2850 1000
+Connection ~ 2850 1000
+Wire Wire Line
+	2850 1000 3350 1000
+Wire Wire Line
+	2850 1300 2850 1400
+Wire Wire Line
+	2850 1400 2350 1400
+Connection ~ 2350 1400
+Wire Wire Line
+	2350 1400 2350 1200
+Wire Wire Line
+	3350 1300 3350 1400
+Wire Wire Line
+	3350 1400 2850 1400
+Connection ~ 2850 1400
+$Comp
+L Device:C_Small C4
+U 1 1 5B78B355
+P 1800 1200
+F 0 "C4" H 1892 1246 50  0000 L CNN
+F 1 "10uF" H 1892 1155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1210" H 1800 1200 50  0001 C CNN
+F 3 "~" H 1800 1200 50  0001 C CNN
+	1    1800 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1000 1800 1000
+Wire Wire Line
+	1800 1000 1800 1100
+Wire Wire Line
+	1800 1300 1800 1400
+Wire Wire Line
+	1800 1400 2350 1400
+Connection ~ 1800 1000
+Text Label 3150 1000 0    50   ~ 0
+SYS_3V3
+$Comp
+L Device:R_Small R8
+U 1 1 5B7CECC5
+P 6100 2050
+F 0 "R8" H 6159 2096 50  0000 L CNN
+F 1 "10" H 6159 2005 50  0000 L CNN
+F 2 "Klibrary:R_0603" H 6100 2050 50  0001 C CNN
+F 3 "~" H 6100 2050 50  0001 C CNN
+	1    6100 2050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6200 2050 6250 2050
+Connection ~ 6250 2050
+Connection ~ 9000 2000
+$Comp
+L power:GND #PWR0106
+U 1 1 5B80E2CC
+P 9450 2400
+F 0 "#PWR0106" H 9450 2150 50  0001 C CNN
+F 1 "GND" H 9455 2227 50  0000 C CNN
+F 2 "" H 9450 2400 50  0001 C CNN
+F 3 "" H 9450 2400 50  0001 C CNN
+	1    9450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5B81A144
+P 6950 2450
+F 0 "#PWR0107" H 6950 2200 50  0001 C CNN
+F 1 "GND" H 6955 2277 50  0000 C CNN
+F 2 "" H 6950 2450 50  0001 C CNN
+F 3 "" H 6950 2450 50  0001 C CNN
+	1    6950 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D6
+U 1 1 5B82CE81
+P 5550 5400
+F 0 "D6" V 5504 5479 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 5595 5479 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 5550 5400 50  0001 C CNN
+F 3 "~" H 5550 5400 50  0001 C CNN
+	1    5550 5400
+	0    -1   1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D5
+U 1 1 5B82D2B2
+P 5550 4450
+F 0 "D5" V 5504 4529 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 5595 4529 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 5550 4450 50  0001 C CNN
+F 3 "~" H 5550 4450 50  0001 C CNN
+	1    5550 4450
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	5550 3700 5550 3650
+Wire Wire Line
+	5550 3700 5700 3700
+Wire Wire Line
+	5700 3300 5550 3300
+Wire Wire Line
+	5550 3300 5550 3350
+Connection ~ 5700 3300
+Wire Wire Line
+	5700 4250 5550 4250
+Wire Wire Line
+	5550 4250 5550 4300
+Connection ~ 5700 4250
+Wire Wire Line
+	5550 4600 5550 4650
+Wire Wire Line
+	5550 4650 5700 4650
+Wire Wire Line
+	5700 5200 5550 5200
+Wire Wire Line
+	5550 5200 5550 5250
+Connection ~ 5700 5200
+Wire Wire Line
+	5550 5550 5550 5600
+Wire Wire Line
+	5550 5600 5700 5600
+Wire Wire Line
+	8350 5600 8350 5550
+Wire Wire Line
+	8350 5600 8500 5600
+Wire Wire Line
+	8500 5200 8350 5200
+Wire Wire Line
+	8350 5200 8350 5250
+Connection ~ 8500 5200
+Wire Wire Line
+	8350 4650 8350 4600
+Wire Wire Line
+	8350 4650 8500 4650
+Wire Wire Line
+	8500 4250 8350 4250
+Wire Wire Line
+	8350 4250 8350 4300
+Connection ~ 8500 4250
+Wire Wire Line
+	8350 3700 8350 3650
+Wire Wire Line
+	8350 3700 8500 3700
+Wire Wire Line
+	8500 3300 8350 3300
+Wire Wire Line
+	8350 3300 8350 3350
+Connection ~ 8500 3300
+$Comp
+L Diode:B220 D7
+U 1 1 5B8F8118
+P 7550 2050
+F 0 "D7" H 7550 1950 50  0000 C CNN
+F 1 "DB2S31600L" H 7550 2150 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-523" H 7550 1875 50  0001 C CNN
+F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 7550 2050 50  0001 C CNN
+	1    7550 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:B220 D12
+U 1 1 5B8F81EE
+P 10000 2000
+F 0 "D12" H 10000 1900 50  0000 C CNN
+F 1 "DB2S31600L" H 10000 2100 50  0000 C CNN
+F 2 "Diodes_SMD:D_SOD-523" H 10000 1825 50  0001 C CNN
+F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 10000 2000 50  0001 C CNN
+	1    10000 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 1800 7550 1800
+Wire Wire Line
+	7550 1800 7550 1900
+Connection ~ 6950 1800
+Wire Wire Line
+	7550 2200 7550 2350
+Wire Wire Line
+	7550 2350 6950 2350
+Wire Wire Line
+	10000 1750 10000 1850
+Wire Wire Line
+	9450 1750 10000 1750
+Connection ~ 9450 1750
+Wire Wire Line
+	10000 2150 10000 2300
+Wire Wire Line
+	10000 2300 9450 2300
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D10
+U 1 1 5B82CDB7
+P 8350 5400
+F 0 "D10" V 8304 5479 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 8395 5479 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 8350 5400 50  0001 C CNN
+F 3 "~" H 8350 5400 50  0001 C CNN
+	1    8350 5400
+	0    -1   1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D9
+U 1 1 5B82C462
+P 8350 4450
+F 0 "D9" V 8304 4529 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 8395 4529 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 8350 4450 50  0001 C CNN
+F 3 "~" H 8350 4450 50  0001 C CNN
+	1    8350 4450
+	0    -1   1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D8
+U 1 1 5B82C23A
+P 8350 3500
+F 0 "D8" V 8304 3579 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 8395 3579 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 8350 3500 50  0001 C CNN
+F 3 "~" H 8350 3500 50  0001 C CNN
+	1    8350 3500
+	0    -1   1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue D4
+U 1 1 5B82BF96
+P 5550 3500
+F 0 "D4" V 5504 3579 50  0000 L CNN
+F 1 "SMAJ30CA‎" V 5595 3579 50  0000 L CNN
+F 2 "Klibrary:D_SMA" H 5550 3500 50  0001 C CNN
+F 3 "~" H 5550 3500 50  0001 C CNN
+	1    5550 3500
+	0    -1   1    0   
+$EndComp
+$Comp
+L controller_MK4-rescue:Schottky_diode-KLibrary D2
+U 1 1 5B9926D1
+P 6450 1300
+F 0 "D2" V 6425 1379 24  0000 L CNN
+F 1 "B240A-13-F" V 6475 1379 24  0000 L CNN
+F 2 "Klibrary:D_SMA" H 6450 1125 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/b2/2f/2a/0c/8b/b5/46/a3/CD00130229.pdf/files/CD00130229.pdf/jcr:content/translations/en.CD00130229.pdf" H 6450 1300 50  0001 C CNN
+	1    6450 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6450 950  6450 1200
+Wire Wire Line
+	6450 1400 6450 1650
+$Comp
+L controller_MK4-rescue:Schottky_diode-KLibrary D11
+U 1 1 5B9B01FA
+P 9250 1250
+F 0 "D11" V 9225 1329 24  0000 L CNN
+F 1 "B240A-13-F" V 9275 1329 24  0000 L CNN
+F 2 "Klibrary:D_SMA" H 9250 1075 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/b2/2f/2a/0c/8b/b5/46/a3/CD00130229.pdf/files/CD00130229.pdf/jcr:content/translations/en.CD00130229.pdf" H 9250 1250 50  0001 C CNN
+	1    9250 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9250 950  9250 1150
+Wire Wire Line
+	9250 1350 9250 1650
+$Comp
+L power:GND #PWR0115
+U 1 1 5B9CEE8F
+P 1000 1550
+F 0 "#PWR0115" H 1000 1300 50  0001 C CNN
+F 1 "GND" H 1005 1377 50  0000 C CNN
+F 2 "" H 1000 1550 50  0001 C CNN
+F 3 "" H 1000 1550 50  0001 C CNN
+	1    1000 1550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

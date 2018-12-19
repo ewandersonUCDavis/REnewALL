@@ -1,0 +1,436 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# 74xx:74LV14
+#
+DEF 74xx:74LV14 U 0 40 Y Y 7 L N
+F0 "U" 0 50 50 H V C CNN
+F1 "74xx:74LV14" 0 -50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ DIP?14*
+$ENDFPLIST
+DRAW
+S -200 300 200 -300 7 1 10 f
+P 4 1 0 10 -150 150 -150 -150 150 0 -150 150 f
+P 4 2 0 10 -150 150 -150 -150 150 0 -150 150 f
+P 4 3 0 10 -150 150 -150 -150 150 0 -150 150 f
+P 4 4 0 10 -150 150 -150 -150 150 0 -150 150 f
+P 4 5 0 10 -150 150 -150 -150 150 0 -150 150 f
+P 4 6 0 10 -150 150 -150 -150 150 0 -150 150 f
+X ~ 1 -300 0 150 R 50 50 1 0 I
+X ~ 2 300 0 150 L 50 50 1 0 O I
+X ~ 3 -300 0 150 R 50 50 2 0 I
+X ~ 4 300 0 150 L 50 50 2 0 O I
+X ~ 5 -300 0 150 R 50 50 3 0 I
+X ~ 6 300 0 150 L 50 50 3 0 O I
+X ~ 8 300 0 150 L 50 50 4 0 O I
+X ~ 9 -300 0 150 R 50 50 4 0 I
+X ~ 10 300 0 150 L 50 50 5 0 O I
+X ~ 11 -300 0 150 R 50 50 5 0 I
+X ~ 12 300 0 150 L 50 50 6 0 O I
+X ~ 13 -300 0 150 R 50 50 6 0 I
+X 3.3V 14 0 500 200 D 50 50 7 0 W
+X GND 7 0 -500 200 U 50 50 7 0 W
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic:Conn_01x02
+#
+DEF Connector_Generic:Conn_01x02 J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Generic:Conn_01x02" 0 -200 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 50 50 -150 1 1 10 f
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic:Conn_01x04
+#
+DEF Connector_Generic:Conn_01x04 J 0 40 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "Connector_Generic:Conn_01x04" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 150 50 -250 1 1 10 f
+X Pin_1 1 -200 100 150 R 50 50 1 1 P
+X Pin_2 2 -200 0 150 R 50 50 1 1 P
+X Pin_3 3 -200 -100 150 R 50 50 1 1 P
+X Pin_4 4 -200 -200 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Generic:Conn_01x06
+#
+DEF Connector_Generic:Conn_01x06 J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Generic:Conn_01x06" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+S -50 -295 0 -305 1 1 6 N
+S -50 -195 0 -205 1 1 6 N
+S -50 -95 0 -105 1 1 6 N
+S -50 5 0 -5 1 1 6 N
+S -50 105 0 95 1 1 6 N
+S -50 205 0 195 1 1 6 N
+S -50 250 50 -350 1 1 10 f
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:C_Small
+#
+DEF Device:C_Small C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "Device:C_Small" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *:C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Fuse_Small
+#
+DEF Device:Fuse_Small F 0 10 N N 1 F N
+F0 "F" 0 -60 50 H V C CNN
+F1 "Device:Fuse_Small" 0 60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *:SM*
+$ENDFPLIST
+DRAW
+S -50 20 50 -20 0 1 0 N
+P 2 0 1 0 -50 0 50 0 N
+X ~ 1 -100 0 50 R 50 50 1 1 P
+X ~ 2 100 0 50 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:LED
+#
+DEF Device:LED D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device:LED" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 N
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 N
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:R_Small
+#
+DEF Device:R_Small R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device:R_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *:R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Diode:B220
+#
+DEF Diode:B220 D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Diode:B220" 0 -100 50 H V C CNN
+F2 "Diode_SMD:D_SMB" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+ALIAS B230 B240 B250 B260
+$FPLIST
+ *:D*SMB*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Isolator:TLP291
+#
+DEF Isolator:TLP291 U 0 40 Y Y 1 F N
+F0 "U" -200 200 50 H V L CNN
+F1 "Isolator:TLP291" 0 200 50 H V L CNN
+F2 "Package_DIP:SMDIP-4_W7.62mm" -200 -200 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS SFH617A-2X009T SFH617A-2X019T
+$FPLIST
+ SMDIP*W7.62mm*
+$ENDFPLIST
+DRAW
+S -200 150 200 -150 0 1 10 f
+P 2 0 1 10 -125 -25 -75 -25 N
+P 2 0 1 0 100 25 175 100 N
+P 2 0 1 0 175 -100 100 -25 F
+P 2 0 1 0 175 -100 200 -100 N
+P 2 0 1 0 175 100 200 100 N
+P 3 0 1 0 -100 -25 -100 -100 -200 -100 N
+P 3 0 1 20 100 75 100 -75 100 -75 N
+P 4 0 1 0 -200 100 -100 100 -100 -50 -100 25 N
+P 4 0 1 10 -100 -25 -125 25 -75 25 -100 -25 N
+P 5 0 1 0 -20 -20 30 -20 15 -25 15 -15 30 -20 N
+P 5 0 1 0 -20 20 30 20 15 15 15 25 30 20 N
+P 5 0 1 0 120 -65 140 -45 160 -85 120 -65 120 -65 F
+X ~ 1 -300 100 100 R 50 50 1 1 P
+X ~ 2 -300 -100 100 R 50 50 1 1 P
+X ~ 3 300 -100 100 L 50 50 1 1 P
+X ~ 4 300 100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "controller_MK5-rescue:D_TVS-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *SingleDiode
+ *_Diode_*
+ *SingleDiode*
+ *:D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 -100 -50 0 0 -100 50 -100 -50 N
+P 4 0 1 8 20 50 0 50 0 -50 -20 -50 N
+P 4 0 1 8 100 50 100 -50 0 0 100 50 N
+X A1 A -150 0 100 R 50 50 1 1 P
+X A2 C 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:G6B-2114P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:G6B-2114P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue U 0 40 Y Y 1 F N
+F0 "U" 0 350 50 H V C CNN
+F1 "controller_MK5-rescue:G6B-2114P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue" 0 -450 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -200 200 250 -200 0 1 0 N
+P 2 0 1 0 50 -150 50 -200 N
+P 2 0 1 0 50 150 50 200 N
+P 2 0 1 0 200 -150 200 -200 N
+P 2 0 1 0 200 150 200 200 N
+P 3 0 1 0 50 150 50 100 150 100 N
+P 3 0 1 0 200 -150 150 -150 150 -100 N
+P 3 0 1 0 200 150 150 150 150 100 N
+P 4 0 1 0 50 -150 50 -100 100 -100 150 -50 N
+X - 1 -150 -300 100 U 50 50 1 1 I
+X ~ 3 50 -300 100 U 50 50 1 1 I
+X ~ 4 200 -300 100 U 50 50 1 1 I
+X ~ 5 200 300 100 D 50 50 1 1 I
+X ~ 6 50 300 100 D 50 50 1 1 I
+X + 8 -150 300 100 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:G6B-2214P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:G6B-2214P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue U 0 40 Y Y 1 F N
+F0 "U" 0 350 50 H V C CNN
+F1 "controller_MK5-rescue:G6B-2214P-US-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue" 0 -450 50 H V C CNN
+F2 "" 0 -50 50 H I C CNN
+F3 "" 0 -50 50 H I C CNN
+DRAW
+S -200 200 250 -200 0 1 0 N
+P 2 0 1 0 50 -150 50 -200 N
+P 2 0 1 0 50 150 50 200 N
+P 2 0 1 0 200 -150 200 -200 N
+P 2 0 1 0 200 150 200 200 N
+P 3 0 1 0 200 -150 150 -150 150 -100 N
+P 3 0 1 0 200 150 150 150 150 100 N
+P 4 0 1 0 50 -150 50 -100 100 -100 150 -50 N
+P 4 0 1 0 50 150 50 100 100 100 150 50 N
+X - 1 -150 -300 100 U 50 50 1 1 I
+X ~ 3 50 -300 100 U 50 50 1 1 I
+X ~ 4 200 -300 100 U 50 50 1 1 I
+X ~ 5 200 300 100 D 50 50 1 1 I
+X ~ 6 50 300 100 D 50 50 1 1 I
+X + 8 -150 300 100 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:MountingHole-M3-KLibrary-controller_MK4-rescue
+#
+DEF ~controller_MK5-rescue:MountingHole-M3-KLibrary-controller_MK4-rescue J 0 40 Y Y 1 F N
+F0 "J" 0 50 24 H V C CNN
+F1 "controller_MK5-rescue:MountingHole-M3-KLibrary-controller_MK4-rescue" 0 -50 24 H I C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+X GND/Shield 1 0 0 0 R 24 24 1 1 I
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:NMOS_GENERAL-KLibrary-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:NMOS_GENERAL-KLibrary-controller_MK4-rescue Q 0 0 Y Y 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "controller_MK5-rescue:NMOS_GENERAL-KLibrary-controller_MK4-rescue" 200 0 50 H V L CNN
+F2 "" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+$FPLIST
+ SOT-23*
+$ENDFPLIST
+DRAW
+C 50 0 111 0 1 10 N
+C 100 -50 5 0 1 0 N
+C 100 50 5 0 1 0 N
+P 2 0 1 20 25 -40 25 -65 N
+P 2 0 1 20 25 15 25 -15 N
+P 2 0 1 20 25 65 25 40 N
+P 2 0 1 0 120 15 115 10 N
+P 2 0 1 0 120 15 140 15 N
+P 2 0 1 0 140 15 145 20 N
+P 3 0 1 10 0 60 0 -60 0 -60 N
+P 4 0 1 0 30 -50 100 -50 100 -100 100 -100 N
+P 4 0 1 0 30 50 100 50 100 100 100 100 N
+P 4 0 1 0 100 50 130 50 130 -50 100 -50 N
+P 4 0 1 0 130 15 120 -10 140 -10 130 15 F
+P 5 0 1 0 30 0 50 0 100 0 100 -50 100 -50 N
+P 6 0 1 0 35 0 75 15 75 -15 35 0 40 0 40 0 F
+X D D 100 200 100 D 50 50 1 1 P
+X G G -200 -50 200 R 50 50 1 1 P
+X S S 100 -200 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:OKI-78SR-KLibrary-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:OKI-78SR-KLibrary-controller_MK4-rescue U 0 40 Y Y 1 F N
+F0 "U" 0 150 50 H V C CNN
+F1 "controller_MK5-rescue:OKI-78SR-KLibrary-controller_MK4-rescue" 250 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -250 100 250 -100 0 1 0 N
+X VIN 1 -350 0 98 R 50 50 1 1 W
+X GND 2 0 -200 98 U 50 50 1 1 I
+X VOUT 3 350 0 98 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:Schottky_diode-KLibrary-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:Schottky_diode-KLibrary-controller_MK4-rescue D 0 40 N N 1 F N
+F0 "D" 0 50 24 H V C CNN
+F1 "controller_MK5-rescue:Schottky_diode-KLibrary-controller_MK4-rescue" 0 -100 24 H V C CNN
+F2 "" 0 -175 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ *:D*SOD?123*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 8 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 8 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X A A 100 0 100 L 50 50 1 1 P
+X C C -100 0 100 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# controller_MK5-rescue:XBEE_900HP-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue
+#
+DEF controller_MK5-rescue:XBEE_900HP-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue U 0 40 Y Y 1 F N
+F0 "U" -650 600 50 H V C CNN
+F1 "controller_MK5-rescue:XBEE_900HP-KLibrary-controller_MK2-rescue-controller_MK3-rescue-controller_MK4-rescue" 500 600 50 H V C CNN
+F2 "" 0 200 50 H I C CNN
+F3 "" 0 200 50 H I C CNN
+DRAW
+S -750 550 750 -550 0 1 0 N
+X VCC 1 -850 450 100 R 50 50 1 1 W
+X GND 10 -850 -450 100 R 50 50 1 1 I
+X DIO4/SPI_MOSI 11 850 -450 100 L 50 50 1 1 B
+X ~CTS~/DIO7 12 850 -350 100 L 50 50 1 1 B
+X ON_~SLEEP~/DOI9 13 850 -250 100 L 50 50 1 1 O
+X VREF 14 850 -150 100 L 50 50 1 1 I
+X ASSO/DIO5 15 850 -50 100 L 50 50 1 1 B
+X ~RTS~/DIO6 16 850 50 100 L 50 50 1 1 B
+X AD3/DIO3/SPI_SS 17 850 150 100 L 50 50 1 1 B
+X AD2/DIO2/SPI_CLK 18 850 250 100 L 50 50 1 1 B
+X AD1/DIO1/SPI_ATTN 19 850 350 100 L 50 50 1 1 B
+X DOUT/DIO13 2 -850 350 100 R 50 50 1 1 B
+X AD0/DIO0 20 850 450 100 L 50 50 1 1 B
+X DIN/~CONF~/DIO14 3 -850 250 100 R 50 50 1 1 B
+X DIO12/SPI_MISO 4 -850 150 100 R 50 50 1 1 B
+X ~RST 5 -850 50 100 R 50 50 1 1 I
+X DIO10/PWM0 6 -850 -50 100 R 50 50 1 1 B
+X DIO11/PWM1 7 -850 -150 100 R 50 50 1 1 B
+X Reserved 8 -850 -250 100 R 50 50 1 1 I
+X ~DTR~/SLEEP_RQ/DIO8 9 -850 -350 100 R 50 50 1 1 B
+ENDDRAW
+ENDDEF
+#
+# power:GND
+#
+DEF power:GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power:GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+#End Library
